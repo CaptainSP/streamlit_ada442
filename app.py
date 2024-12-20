@@ -14,7 +14,7 @@ model = load_model()
 
 def create_interface():
     
-    st.title("Streamlit Interface for Data Input")
+    st.title("ADA442 Final Project")
 
     st.header("Personal Information")
     age = st.slider("Age", min_value=18, max_value=100)
@@ -143,9 +143,19 @@ def welcome_page(router):
     """,
     unsafe_allow_html=True,
     )
-    st.title("Welcome to the Data Input Interface")
+    st.title("ADA442 Final Project")
+    st.write("## Group 5")
     st.write("")
-    st.write("")
+    
+    st.write("""
+             
+             #### Members:
+                - Hakan Uca
+                - Deniz Polat
+                - Burak Güçlü
+                - Emirhan Eyidoğan
+             
+             """)
    
     col1, col2, col3 = st.columns([1, 2, 1])
 
@@ -153,7 +163,7 @@ def welcome_page(router):
         st.write("")
 
     with col2:
-        if st.button("Enter Data"):
+        if st.button("Start Prediction"):
             router.redirect("/data_input")
 
     with col3:
